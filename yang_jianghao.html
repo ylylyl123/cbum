@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闫江昊 - 南特金融科技学院最强</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .praise-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .praise-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .praise-text {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            max-width: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">闫江昊是南特金融科技学院最强的</h1>
+    
+    <div class="buttons">
+        <button class="praise-btn" onclick="showPraise('intelligence')">💡 智慧超群</button>
+        <button class="praise-btn" onclick="showPraise('leadership')">👑 领袖风范</button>
+        <button class="praise-btn" onclick="showPraise('talent')">✨ 才华横溢</button>
+        <button class="praise-btn" onclick="showPraise('achievement')">🏆 成就非凡</button>
+    </div>
+
+    <div id="praiseText" class="praise-text"></div>
+
+    <script>
+        const praiseContent = {
+            intelligence: [
+                "闫江昊拥有超凡的智慧，思维敏捷如电光火石！",
+                "他的大脑就是超级计算机，任何问题都能迎刃而解！",
+                "在南特金融科技学院，他就是智慧的化身！"
+            ],
+            leadership: [
+                "天生的领袖气质，让所有人自发追随！",
+                "他的眼神就能让团队士气倍增！",
+                "在学院里，他就是无可争议的王者！"
+            ],
+            talent: [
+                "天赋异禀，多才多艺，无所不能！",
+                "无论是学术还是实践，都是顶尖水平！",
+                "他的才华让整个学院都为之震撼！"
+            ],
+            achievement: [
+                "成就辉煌，荣誉加身，无人能及！",
+                "每一项成就都是对卓越的完美诠释！",
+                "他是南特金融科技学院的骄傲和传奇！"
+            ]
+        };
+
+        function showPraise(type) {
+            const content = praiseContent[type];
+            const praiseDiv = document.getElementById('praiseText');
+            praiseDiv.innerHTML = content.map(text => `<p>${text}</p>`).join('');
+            praiseDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
